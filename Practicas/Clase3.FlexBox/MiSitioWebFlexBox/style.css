@@ -36,6 +36,7 @@
     opacity: 0.8;
     padding: 1rem 0;
     transition: all ease-in 0.3s;
+    z-index: 5;
 }
 .menu-hamburguer ul{
     width: 100%;
