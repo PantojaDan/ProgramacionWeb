@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#btn-hamburguer{
+    display: none;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #405DE6;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+#btn-hamburguer i{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.hidemenu{
+    transform: translateX(-100vw);
+}
+.menu-hamburguer{
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #405DE6;
+    opacity: 0.8;
+    padding: 1rem 0;
+    transition: all ease-in 0.3s;
+    z-index: 5;
+}
+.menu-hamburguer ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.menu-hamburguer ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-hamburguer ul li{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transition: all ease 0.2s;
+}
+.menu-hamburguer ul li:hover{
+    background-color: #647ae6;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+#logo-img{
+    width: 30%;
+}
+#logo-img img{
+    width: 100%;
+    height: 100%;
+}
+header nav{
+    width: 60%;
+}
+header ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+header ul a{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+}
+header ul li{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    color: rgb(37, 37, 37);
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    font-size: 1.1rem;
+}
+header ul li:hover{
+    background-color: rgb(219, 217, 217);
+}
+
+
+.hide-table{
+    opacity: 0;
+}
+
+#items-launched{
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 4;
+}
+#items-launched thead tr th{
+    border: none;
+    font-weight: 100;
+    color: white;
+    padding: 1rem;
+    background-color: #2d2f38;
+}
+#items-launched tbody tr td{
+    text-align: center;
+    padding: 1rem;
+}
+/*CON ESTO HACEMOS LO DE DAR ESTILOS A FILAS IMPARES*/
+#items-launched tbody tr:nth-child(even){
+    background-color: #eeeeee;
+}
+
+@media screen and (max-width: 850px){
+    header ul li{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .container-content main .item{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 730px){
+    header ul{
+        display: none;
+    }
+    header{
+        justify-content: center;
+    }
+    #logo-img{
+        width: 250px;
+    }
+    #btn-hamburguer{
+        display: flex;
+    }
+}
+@media screen and (max-width: 400px){
+    .menu-hamburguer{
+        width: 100%;
+    }
+    #btn-hamburguer{
+        z-index: 5;
+    }
+    .container-content{
+        flex-direction: column !important;
+    }
+    .container-content aside{
+        width: 100% !important;
+    }
+    .container-content aside h3{
+        text-align: center;
+    }
+    .container-content aside ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .container-content aside ul div{
+        width: 20%;
+    }
+    .container-content main{
+        width: 100% !important;
+    }
+}
+
+
+.hero-header{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.hero-header video{
+    width: 100%;
+    overflow: hidden;
+}
+#capa-video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#capa-video h1{
+    font-size: 3em;
+    color: rgb(204, 204, 204);
+    margin-bottom: 2rem;
+}
+#capa-video h1 span{
+    color: #405DE6;
+}
+#capa-video p{
+    color: white;
+}
+@media screen and (max-width: 895px){
+    .hero-header{
+        height: 350px;
+    }
+    #capa-video h1{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 630px){
+    .hero-header{
+        height: 240px;
+    }
+    #capa-video h1{
+        font-size: 1.5rem;
+    }
+    #capa-video p{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 430px){
+    .hero-header{
+        display: none;
+    }
+}
+
+
+#title-content{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #2d2f38;
+}
+
+
+
+.container-content{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.container-content aside{
+    width: 25%;
+}
+.container-content main{
+    width: 75%;
+}
+
+
+
+.container-content aside h3{
+    color: rgb(87, 87, 87);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.container-content aside ul{
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+.container-content aside ul li{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.container-content aside ul li p{
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+    color: rgb(44, 44, 44);
+}
+.container-content aside ul li input{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+.container-content main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.container-content main .item{
+    width: 40%;
+    height: 250px;
+    margin: 0.5rem;
+    transition: all ease-in-out 0.3s;
+}
+.container-content main .item:hover{
+    transform: scale(1.05);
+}
+.image-item{
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.image-item:hover .reactions{
+    display: flex;
+}
+.pressedLiked{
+    color: #405DE6 !important;
+}
+.pressedLoved{
+    color: rgb(199, 23, 23) !important;
+}
+.reactions{
+    transition: all ease 0.2s !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+}
+.reactions > span{
+    font-size: 2rem;
+    color: white;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+#image-1{
+    background-image: url('./img/clothe_1.jpg');
+}
+#image-2{
+    background-image: url('./img/clothes_2.jpg');
+}
+#image-3{
+    background-image: url('./img/clothes4.jpg');
+}
+#image-4{
+    background-image: url('./img/clothes_5.jpg');
+}
+#image-5{
+    background-image: url('./img/clothes_6.jpg');
+}
+#image-6{
+    background-image: url('./img/clothes7.jpg');
+}
+#image-7{
+    background-image: url('./img/clothes8.jpg');
+}
+#image-8{
+    background-image: url('./img/shorts.jpg');
+}
+.description{
+    width: 100% !important;
+    height: 30%;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.description h1{
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.description p{
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+
+
+#acerca-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #2d2f38;
+}
+#acerca-de{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #2d2f38;
+}
+#acerca-de > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#concierto > audio{
+    width: 100%;
+}
+#video{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#video video{
+    width: 400px;
+    height: 400px;
+    margin: 1rem;
+    border-radius: 7px;
+}
+#video audio{
+    width: 400px;
+    border-radius: 7px;
+}
+#youtube{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#youtube iframe{
+    width: 560px;
+    height: 315px;
+    border-radius: 7px;
+}
+@media screen and (max-width: 1032px){
+    #acerca-de{
+        flex-direction: column;
+    }   
+}
+@media screen and (max-width: 570px){
+    #video video{
+        width: 250px;
+        height: 250px;
+    }
+    #concierto audio{
+        width: 250px;
+        border-radius: 7px;
+    }
+    #youtube{
+        width: 100%;
+        padding: none !important;
+    }
+    #youtube iframe{
+        padding: none !important;
+        width: 260px;
+        height: 260px;
+    }
+}
+@media screen and (max-width: 360px){
+    .container-content aside ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-content aside ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #youtube iframe{
+        width: 220px;
+        height: 220px;
+        padding: none;
+    }
+}
+
+
+
+
+#contactanos{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+#form-contact{
+    width: 300px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    transition: all ease 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+#form-contact:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+#form-contact fieldset{
+    border: none;
+}
+#form-contact fieldset input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #eee;
+    color: #9c9c9c;
+    outline: none;
+}
+#form-contact fieldset textarea{
+    width: 100%;
+    resize: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #eee;
+    color: #9c9c9c;
+    outline: none;
+}
+#form-contact button{
+    background-color: #405DE6;
+    margin: 1rem auto;
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+footer{
+    padding: 1rem;
+    background-color: rgb(10, 11, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.red{
+    width: 50px;
+    height: 50px;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red > i{
+    font-size: 2.4rem;
+}
+.fa-facebook{
+    color: rgb(19, 28, 151);
+}
+.fa-twitter{
+    color: rgb(33, 97, 216);
+}
+.fa-instagram{
+    color: white;
+}
+#instagram{
+    background: linear-gradient(to right, #F56040, #405DE6);
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-media > a{
+    text-decoration: none;
+}
+.credits p{
+    color: #405DE6;
+}
+.credits p span{
+    color: white;
+}
